@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, hsl(240, 73%, 65%) 0%, hsl(273, 75%, 66%) 100%);
+    min-height: 100vh;
+    z-index: 5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+    margin: 125px 0px 100px 0px;
+    max-width: 325px;
+    padding: 0px 25px 50px 25px;
+    box-sizing: border-box;
+    border-radius: 5%;
+    box-shadow: 0px 30px 30px -10px rgba(0, 0, 0, 0.31);
+    color: hsl(238, 29%, 16%);
+}
+
+.arrow {
+    float: right;
+    margin-top: 6px;
+}
+
+.woman-img {
+    position: absolute;
+    top: -110px;
+    left: 40px;
+    max-width: 240px;
+}
+
+.pattern-img {
+    margin: auto;
+    display: block;
+}
+
+.box-img {
+    display: none;
+}
+
+.questions {
+    border-bottom: 1px solid gainsboro;
+}
+
+.question:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+.answer {
+    font-size: 12px;
+    margin: 0 14px 0 0;
+    transition: all .5s ease-in-out;
+    line-height: 0;
+    color: transparent;
+}
+
+.slideAnimation {
+    margin: 0 14px 14px 0;
+    line-height: 1.5;
+    color: black;
+    transition: all .5s ease-in-out;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.flip {
+    transform: scaleY(-1);
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        flex-direction: row;
+        max-width: 900px;
+        padding: 0;
+    }
+
+    .faq {
+        padding: 75px 75px 75px 0px;
+        box-sizing: border-box;
+        width: 450px;
+    }
+
+    h1 {
+        text-align: left;
+        margin: 0 0 50px 0;
+    }
+
+    .images {
+        overflow: hidden;
+    }
+
+    .questions {
+        max-width: 450px;
+    }
+
+    .woman-img {
+        position: relative;
+        left: -80px;
+        top: 90px;
+        max-width: 500px;
+        z-index: 1;
+    }
+
+    .pattern-img {
+        clip-path: inset(250px 0 0 500px);
+        position: absolute;
+        top: -250px;
+        right: 520px;
+        width: 900px;
+    }
+
+    .box-img {
+        display: block;
+        position: absolute;
+        top: 230px;
+        left: -100px;
+        z-index: 2;
+    }
+}
